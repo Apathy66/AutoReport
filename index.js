@@ -1,5 +1,5 @@
 'use strict'
-def.main_handler = async (event, context, callback) => {
+exports.main_handler = async (event, context, callback) => {
   const axios = require('axios')
   const dayjs = require('dayjs')
   const utc = require('dayjs/plugin/utc') // dependent on utc plugin
@@ -87,4 +87,4 @@ def.main_handler = async (event, context, callback) => {
   const i = await postInfo()
   console.log(text)
   return text
-}
+};
