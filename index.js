@@ -1,4 +1,11 @@
 'use strict'
+exports.main_handler = async (event, context) => {
+    console.log("Hello World")
+    console.log(event)
+    console.log(event["non-exist"])
+    console.log(context)
+    return event
+};
 exports.main_handler = async (event, context, callback) => {
   const axios = require('axios')
   const dayjs = require('dayjs')
